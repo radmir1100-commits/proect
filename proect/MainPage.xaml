@@ -10,17 +10,26 @@
                    FontSize="24"
                    TextColor="Blue"
                    HorizontalOptions="Center"/>
-            
+
+            <!-- Основные данные пользователя -->
+            <Label Text="Основные данные:" FontSize="20" TextColor="DarkBlue" Margin="0,10,0,0"/>
             <Label x:Name="UserNameLabel" FontSize="18" TextColor="DarkBlue"/>
             <Label x:Name="UserHeightLabel" FontSize="18" TextColor="DarkBlue"/>
             <Label x:Name="UserWeightLabel" FontSize="18" TextColor="DarkBlue"/>
             <Label x:Name="UserAgeLabel" FontSize="18" TextColor="DarkBlue"/>
-            
+
+            <!-- Текущий прогресс -->
+            <Label Text="Текущий прогресс:" FontSize="20" TextColor="DarkGreen" Margin="0,20,0,0"/>
+            <Label x:Name="CurrentWeightLabel" FontSize="18" TextColor="DarkGreen"/>
+            <Label x:Name="CurrentHeightLabel" FontSize="18" TextColor="DarkGreen"/>
+            <Label x:Name="MeasurementDateLabel" FontSize="18" TextColor="DarkGreen"/>
+
             <Entry x:Name="NameEntry" Placeholder="Введите ваше имя"/>
             <Button Text="Сохранить имя" Clicked="OnSaveNameClicked"/>
-            
+
             <Button Text="Перейти в настройки" Clicked="ongosetting" BackgroundColor="LightBlue"/>
-            <Button Text="Обновить данные" Clicked="OnRefreshClicked" BackgroundColor="LightGreen"/>
+            <Button Text="Перейти в прогресс" Clicked="OnGoToProgressClicked" BackgroundColor="LightGreen"/>
+            <Button Text="Обновить данные" Clicked="OnRefreshClicked" BackgroundColor="Orange"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>

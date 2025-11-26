@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="proect.progress"
+             Title="Прогресс">
+    <ScrollView>
+        <VerticalStackLayout Padding="30" HorizontalOptions="Center">
+            <Label Text="Текущие параметры" 
+                   FontSize="24" 
+                   TextColor="DarkBlue" 
+                   HorizontalOptions="Center"/>
+
+            <!-- Текущий вес -->
+            <Label Text="Текущий вес:" 
+                   FontSize="20" 
+                   TextColor="Blue" 
+                   HorizontalOptions="Start"/>
+            <Entry x:Name="CurrentWeightEntry" 
+                   Placeholder="Введите текущий вес" 
+                   Keyboard="Numeric"
+                   TextChanged="OnWeightTextChanged"/>
+
+            <!-- Текущий рост -->
+            <Label Text="Текущий рост:" 
+                   FontSize="20" 
+                   TextColor="Blue" 
+                   HorizontalOptions="Start"/>
+            <Entry x:Name="CurrentHeightEntry" 
+                   Placeholder="Введите текущий рост" 
+                   Keyboard="Numeric"
+                   TextChanged="OnHeightTextChanged"/>
+
+            <!-- Дата измерения -->
+            <Label Text="Дата измерения:" 
+                   FontSize="20" 
+                   TextColor="Blue" 
+                   HorizontalOptions="Start"/>
+            <DatePicker x:Name="MeasurementDatePicker"
+                       HorizontalOptions="Start"/>
+
+            <Button Text="Сохранить прогресс" 
+                   TextColor="White" 
+                   BackgroundColor="Green"
+                   Clicked="OnSaveProgressClicked"/>
+
+            <Label x:Name="ProgressLabel" 
+                   FontSize="16" 
+                   TextColor="Red"/>
+
+            <!-- Отображение текущих сохраненных данных -->
+            <Label Text="Сохраненные данные:" 
+                   FontSize="20" 
+                   TextColor="DarkBlue" 
+                   HorizontalOptions="Center"
+                   Margin="0,20,0,0"/>
+
+            <Label x:Name="SavedWeightLabel" 
+                   FontSize="16" 
+                   TextColor="Black"/>
+            <Label x:Name="SavedHeightLabel" 
+                   FontSize="16" 
+                   TextColor="Black"/>
+            <Label x:Name="SavedDateLabel" 
+                   FontSize="16" 
+                   TextColor="Black"/>
+
+            <Button Text="Назад в главное меню" 
+                   Clicked="OnGoBackClicked"
+                   BackgroundColor="LightBlue"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

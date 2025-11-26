@@ -21,4 +21,11 @@
             Route="SettingsPage" />
     </FlyoutItem>
 
+    <FlyoutItem Title="Прогресс">
+        <ShellContent
+            Title="Прогресс"
+            ContentTemplate="{DataTemplate local:progress}"
+            Route="ProgressPage" />
+    </FlyoutItem>
+
 </Shell>
